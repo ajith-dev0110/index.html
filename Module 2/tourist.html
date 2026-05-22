@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist</title>
+</head>
+<body>
+    <!-- Sucess fullily login and logout pages -->
+<div class="auth-container" style="text-align: center;">
+    <h2>Welcome to the Tourist Portal!</h2>
+    <p>You have successfully signed in and authenticated.</p>
+    <button onclick="logout()" class="btn" style="margin-top: 2rem; background-color: var(--error-color);">Log Out</button>
+</div>
+
+<script>
+    // logout fuction script
+    function logout() {
+        alert("Logged out successfully.");
+        window.location.href = "signin.html";
+    }
+</script>
+</body>
+</html>

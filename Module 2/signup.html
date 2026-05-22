@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Create account page -->
+<div class="auth-container">
+    <h2>Create an Account</h2>
+    <form id="signupForm" novalidate>
+        <div class="grid-layout">
+            <!-- Name -->
+            <div class="form-group full-width">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required placeholder="Full Name">
+                <span class="error-message" id="nameError">Name is required (min 3 chars).</span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group full-width">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="Email">
+                <span class="error-message" id="emailError">Enter a valid email address.</span>
+            </div>
+
+            <!-- phone number -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" required placeholder="Phone Number">
+                <span class="error-message" id="phoneError">Must be exactly 10 digits.</span>
+            </div>
+
+            <!-- location -->
+            <div class="form-group">
+                <label for="city">Location / City</label>
+                <input type="text" id="city" required placeholder="Location">
+                <span class="error-message" id="cityError">City must contain only alphabets.</span>
+            </div>
+
+            <!-- password -->
+            <div class="form-group full-width">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" required placeholder="Password">
+                    <button class="toggle-btn" type="button">Show</button>
+                </div>
+                <span class="error-message" id="passwordError">Min 8 chars, at least 1 letter and 1 number.</span>
+            </div>
+
+            <!-- confirm password -->
+            <div class="form-group full-width">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                    <button class="toggle-btn" type="button">Show</button>
+                </div>
+                <span class="error-message" id="confirmPasswordError">Passwords do not match.</span>
+            </div>
+        </div>
+
+        <!-- Signup button -->
+        <button type="submit" class="btn">Sign Up</button>
+        
+        <p class="redirect-link">
+            Already have an account? <a href="index.html">Sign In here</a>
+        </p>
+    </form>
+</div>
+<!-- script added -->
+<script src="scrpt.js"></script>
+</body>
+</html>
