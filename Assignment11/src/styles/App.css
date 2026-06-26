@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1a1a1a;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeInEffect 0.4s ease-out forwards;
+}
+
+@keyframes fadeInEffect {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Home Design */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #eef2f7 0%, #ece9e6 100%);
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.cta-btn.primary { background-color: #007bff; color: white; }
+.cta-btn.primary:hover { background-color: #0056b3; }
+.cta-btn.secondary { background-color: #e2e8f0; color: #333; }
+.cta-btn.secondary:hover { background-color: #cbd5e1; }
+
+/* Grid Layouts */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-bar {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 0.95rem;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* User Profile Cards */
+.user-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  border: 1px solid #edf2f7;
+}
+
+.avatar-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f0f4f8;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-role {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 1.5rem;
+}
+
+.view-profile-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #f1f5f9;
+  color: #333;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.view-profile-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Detailed Profile Section */
+.profile-card-detailed {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
+}
+
+.profile-hero-bg {
+  height: 140px;
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+.profile-content {
+  padding: 0 2rem 2.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.detail-avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+  margin-top: -70px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-badge {
+  display: inline-block;
+  background-color: #e1effe;
+  color: #1e429f;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.profile-meta {
+  margin: 1.5rem 0;
+  text-align: left;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 1.5rem 0;
+}
+
+.profile-bio {
+  text-align: left;
+}
+
+.back-link-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* 404 Layout */
+.not-found-container {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.error-graphics {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #cbd5e1;
+  line-height: 1;
+}
+
+.home-redirect-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
